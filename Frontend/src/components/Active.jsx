@@ -114,7 +114,7 @@ const Active = () => {
           onClick={toggleState}
           disabled={loading || !token || !teacher}
           className={`px-10 py-5 rounded-full text-white font-bold transition-all duration-300 ${
-            isActive ? "bg-green-500" : "bg-[#821131]"
+            isActive ? "bg-green-500" : "bg-[#106850]"
           } ${loading && "opacity-50 cursor-not-allowed"}`}
         >
           {loading ? "Processing..." : isActive ? "Turn Off" : "Turn On"}

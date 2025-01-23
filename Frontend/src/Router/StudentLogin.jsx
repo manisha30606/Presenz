@@ -70,10 +70,10 @@ function StudentLogin() {
   };
   
   return (
-    <div className="bg-[#071952] flex items-center justify-center min-h-screen bg-gradient-to-b from-white-300 to-green-500">
+    <div className="back flex items-center justify-center min-h-screen">
       <ToastContainer />
-      <div className="bg-white p-8 rounded-lg shadow-[0_4px_30px_rgba(236,72,153,0.8)] max-w-md w-full transform transition duration-500 hover:scale-105 hover:shadow-[0_4px_30px_rgba(236,72,153,0.8)] hover:bg-white">
-        <h2 className="text-2xl text-center font-bold text-[#37B7C3] mb-6">Login</h2>
+      <div className="bg-white p-8 rounded-lg shadow-[0_4px_30px_rgba(151, 151, 151, 0.8);] max-w-md w-full transform transition duration-500 hover:scale-105 hover:shadow-[0_4px_30px_rgba(69, 69, 69, 0.8)] hover:bg-white">
+        <h2 className="text-2xl text-center font-bold text-[#211951] mb-6">Login</h2>
         <form onSubmit={handleLogin}>
           <div className="mb-4">
             <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="name">
@@ -85,7 +85,7 @@ function StudentLogin() {
               name="stuName"
               value={stuLoginInfo.stuName}
               onChange={handleChange}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg"
               required
             />
           </div>
@@ -100,7 +100,7 @@ function StudentLogin() {
               name="stuId"
               value={stuLoginInfo.stuId}
               onChange={handleChange}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg "
               required
             />
           </div>
@@ -115,7 +115,7 @@ function StudentLogin() {
               name="stuPassword"
               value={stuLoginInfo.stuPassword}
               onChange={handleChange}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg "
               required
             />
           </div>
@@ -123,7 +123,7 @@ function StudentLogin() {
           <div className="flex justify-between">
             <button
               type="submit"
-              className="bg-white text-black py-2 px-6 rounded-lg shadow-lg hover:bg-[#37B7C3] hover:text-white hover:shadow-xl transition duration-200 flex items-center"
+              className="bg-white text-black py-2 px-6 rounded-lg shadow-lg hover:bg-[#211951] hover:text-white hover:shadow-xl transition duration-200 flex items-center"
             >
               Login Now <span className="ml-2">→</span>
             </button>
@@ -131,7 +131,7 @@ function StudentLogin() {
             <Link to="/StudentSignup">
               <button
                 type="button"
-                className="bg-white text-black py-2 px-6 rounded-lg shadow-lg hover:bg-[#37B7C3] hover:text-white hover:shadow-xl transition duration-200 flex items-center"
+                className="bg-white text-black py-2 px-6 rounded-lg shadow-lg hover:bg-[#211951] hover:text-white hover:shadow-xl transition duration-200 flex items-center"
               >
                 Sign Up Now <span className="ml-2">→</span>
               </button>

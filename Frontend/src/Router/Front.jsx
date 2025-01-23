@@ -5,8 +5,7 @@ import "../app.css";
 
 const Front = () => {
   return (
-    <div className=" bg-[#211951] py-4 flex items-center justify-center h-[100%] 
-    ">
+    <div className=" bg-[#071952] flex items-center justify-center min-h-screen bg-gradient-to-b from-white-300 to-green-500">
       <div className="icon absolute icon1 w-[100px] h-[100px] bg-[#EBF4F6]"></div>
       <div className="icon absolute icon2 w-[100px] h-[100px] bg-[#EBF4F6]"></div>
       <div className="icon absolute icon3 w-[100px] h-[100px] bg-[#EBF4F6]"></div>

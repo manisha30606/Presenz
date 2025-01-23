@@ -69,7 +69,7 @@ const Attendance = () => {
   };
 
   return (
-    <div className="w-full text-cyan-600 shadow-md rounded-lg p-6 mt-6 bg-gray-100">
+    <div className="w-full text-[#211951] shadow-md rounded-lg p-6 mt-6 bg-gray-100">
       <h2 className="text-xl font-bold">Attendance</h2>
       <div className="flex flex-col space-y-4 mt-4">
         <h3 className="text-lg font-semibold">Search Attendance by Month</h3>
@@ -80,7 +80,7 @@ const Attendance = () => {
           <select
             value={selectedYear}
             onChange={handleYearSelection}
-            className="w-full px-3 py-2 border rounded bg-white text-black"
+            className="w-full px-3 py-2 border rounded bg-white text-[#211951]"
           >
             <option value="">-- Select Year --</option>
             {years.map((year) => (
@@ -98,7 +98,7 @@ const Attendance = () => {
             <select
               value={selectedMonth}
               onChange={handleMonthSelection}
-              className="w-full px-3 py-2 border rounded bg-white text-black"
+              className="w-full px-3 py-2 border rounded bg-white text-[#211951]"
             >
               <option value="">-- Select Month --</option>
               {[
@@ -164,8 +164,8 @@ const Attendance = () => {
                   key={key}
                   className="flex flex-col items-center justify-center bg-cyan-100 shadow-lg rounded-lg p-4"
                 >
-                  <h4 className="text-lg font-bold text-cyan-800">{key}</h4>
-                  <p className="text-xl font-semibold text-cyan-600">{value}</p>
+                  <h4 className="text-lg font-bold text-[#211951]">{key}</h4>
+                  <p className="text-xl font-semibold text-[#211951]">{value}</p>
                 </div>
               ))}
             </div>

@@ -56,14 +56,14 @@ function TeacherSignup() {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-[#FABC3F]">
+    <div className="flex items-center justify-center min-h-screen back1">
       <ToastContainer />
       <div
-        className="bg-white p-8 rounded-lg shadow-[0_4px_30px_rgba(236,72,153,0.8)] max-w-md w-full 
+        className="bg-white p-8 rounded-lg ] max-w-md w-full 
                      transform transition duration-500 
-                     hover:shadow-[0_4px_30px_rgba(236,72,153,0.8)]"
+                     ]"
       >
-        <h2 className="text-2xl font-bold text-[#000] text-center mb-6">
+        <h2 className="text-2xl font-bold text-[#23c297] text-center mb-6">
           Admin Sign Up
         </h2>
         <form onSubmit={handleSignup}>
@@ -82,7 +82,7 @@ function TeacherSignup() {
               <input
                 type={type}
                 name={name}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg"
                 onChange={handleChange}
                 value={teaSignupInfo[name]}
               />
@@ -91,14 +91,14 @@ function TeacherSignup() {
           <div className="flex justify-between">
             <button
               type="submit"
-              className="bg-white text-black py-2 px-6 rounded-lg shadow-lg hover:bg-[#821131] hover:text-white hover:shadow-xl transition duration-200"
+              className="bg-white text-black py-2 px-6 rounded-lg shadow-lg hover:bg-[#23c297] hover:text-white hover:shadow-xl transition duration-200"
             >
               Sign Up Now
             </button>
 
             <Link
               to="/TeacherLogin"
-              className="bg-white text-black py-2 px-6 rounded-lg shadow-lg hover:bg-[#821131] hover:text-white hover:shadow-xl transition duration-200"
+              className="bg-white text-black py-2 px-6 rounded-lg shadow-lg hover:bg-[#23c297] hover:text-white hover:shadow-xl transition duration-200"
             >
               Login Instead
             </Link>

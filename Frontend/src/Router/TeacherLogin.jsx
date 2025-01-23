@@ -64,14 +64,14 @@ function TeacherLogin() {
   };
 
   return (
-    <div className="bg-[#FABC3F] flex items-center justify-center min-h-screen bg-gradient-to-b from-white-300 to-green-500">
+    <div className="back1 flex items-center justify-center min-h-screen bg-gradient-to-b from-white-300 to-green-500">
       <ToastContainer />
       <div
-        className="bg-white p-8 rounded-lg shadow-[0_4px_30px_rgba(236,72,153,0.8)] max-w-md w-full 
+        className="bg-white p-8 rounded-lg ] max-w-md w-full 
                      transform transition duration-500 
-                     hover:shadow-[0_4px_30px_rgba(236,72,153,0.8)]"
+                     ]"
       >
-        <h2 className="text-2xl text-center font-bold text-black mb-6">
+        <h2 className="text-2xl text-center font-bold text-[#23c297] mb-6">
           Teacher Login
         </h2>
         <form onSubmit={handleLogin}>
@@ -88,7 +88,7 @@ function TeacherLogin() {
               name="teaEmail"
               value={teaLoginInfo.teaEmail}
               onChange={handleChange}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg"
               required
             />
           </div>
@@ -106,21 +106,21 @@ function TeacherLogin() {
               name="teaPassword"
               value={teaLoginInfo.teaPassword}
               onChange={handleChange}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg"
               required
             />
           </div>
           <div className="flex justify-between">
             <button
               type="submit"
-              className="bg-white text-black py-2 px-6 rounded-lg shadow-lg hover:bg-[#821131] hover:text-white hover:shadow-xl transition duration-200 flex items-center"
+              className="bg-white text-black py-2 px-6 rounded-lg shadow-lg hover:bg-[#23c297] hover:text-white hover:shadow-xl transition duration-200 flex items-center"
             >
               Login Now <span className="ml-2">→</span>
             </button>
 
             <Link
               to="/TeacherSignup"
-              className="bg-white text-black py-2 px-6 rounded-lg shadow-lg hover:bg-[#821131] hover:text-white hover:shadow-xl transition duration-200 flex items-center"
+              className="bg-white text-black py-2 px-6 rounded-lg shadow-lg hover:bg-[#23c297] hover:text-white hover:shadow-xl transition duration-200 flex items-center"
             >
               Sign Up Now <span className="ml-2">→</span>
             </Link>

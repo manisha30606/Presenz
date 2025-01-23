@@ -98,14 +98,14 @@ function StuSignUp() {
 
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-[#071952]">
+    <div className="flex items-center justify-center min-h-screen back">
       <ToastContainer />
       <div
-        className="bg-white p-8 rounded-lg shadow-[0_4px_30px_rgba(236,72,153,0.8)] max-w-md w-full 
+        className="bg-white p-8 rounded-lg ] max-w-md w-full 
                       transform transition duration-500 
-                      hover:shadow-[0_4px_30px_rgba(236,72,153,0.8)]"
+                      ]"
       >
-        <h2 className="text-2xl font-bold text-[#37B7C3] text-center mb-6">Sign Up</h2>
+        <h2 className="text-2xl font-bold text-[#211951] text-center mb-6">Sign Up</h2>
         <form onSubmit={handleSignup}>
           <div className="mb-4">
             <label className="block text-gray-700 text-sm font-bold mb-2">Name of Student:</label>
@@ -113,7 +113,7 @@ function StuSignUp() {
               type="text"
               name="stuName"
               autoComplete="off"
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg"
               onChange={handleChange}
               required
               value={stuSignupInfo.stuName}
@@ -125,7 +125,7 @@ function StuSignUp() {
               type="email"
               name="stuEmail"
               autoComplete="off"
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg"
               onChange={handleChange}
               required
               value={stuSignupInfo.stuEmail}
@@ -137,7 +137,7 @@ function StuSignUp() {
               type="gender"
               name="stuGender"
               autoComplete="off"
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg"
               onChange={handleChange}
               required
               value={stuSignupInfo.stuGender}
@@ -149,7 +149,7 @@ function StuSignUp() {
               type="tel"
               name="stuPhone"
               autoComplete="off"
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg"
               onChange={handleChange}
               required
               value={stuSignupInfo.stuPhone}
@@ -161,7 +161,7 @@ function StuSignUp() {
               type="text"
               name="stuId"
               autoComplete="off"
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg"
               onChange={handleChange}
               required
               value={stuSignupInfo.stuId}
@@ -173,7 +173,7 @@ function StuSignUp() {
               type="password"
               name="stuPassword"
               autoComplete="off"
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg"
               onChange={handleChange}
               required
               value={stuSignupInfo.stuPassword}
@@ -184,7 +184,7 @@ function StuSignUp() {
           <div className="mb-4">
             <button
               type="button"
-              className="bg-blue-500 text-white py-2 px-6 rounded-lg shadow-lg hover:bg-blue-600 hover:shadow-xl transition duration-200"
+              className="bg-[#211951] text-white py-2 px-6 rounded-lg shadow-lg hover:bg-[#382990] hover:shadow-xl transition duration-200"
               onClick={startCamera}
             >
               Start Camera
@@ -193,7 +193,7 @@ function StuSignUp() {
             <canvas ref={canvasRef} width="300" height="200" style={{ display: 'none' }}></canvas>
             <button
               type="button"
-              className="bg-green-500 text-white py-2 px-6 rounded-lg shadow-lg hover:bg-green-600 hover:shadow-xl transition duration-200 mt-2"
+              className="bg-[#279578] text-white py-2 px-6 rounded-lg shadow-lg hover:bg-[#29ba94] hover:shadow-xl transition duration-200 mt-2"
               onClick={capturePhoto}
             >
               Capture Photo
@@ -211,14 +211,14 @@ function StuSignUp() {
           <div className="flex justify-between">
             <button
               type="submit"
-              className="bg-white text-black py-2 px-6 rounded-lg shadow-lg hover:bg-[#37B7C3] hover:text-white hover:shadow-xl transition duration-200 flex items-center"
+              className="bg-white text-black py-2 px-6 rounded-lg shadow-lg hover:bg-[#211951] hover:text-white hover:shadow-xl transition duration-200 flex items-center"
             >
               Sign Up Now <span className="ml-2">→</span>
             </button>
             <Link to="/StudentLogin">
               <button
                 type="button"
-                className="bg-white text-black py-2 px-6 rounded-lg shadow-lg hover:bg-[#37B7C3] hover:text-white hover:shadow-xl transition duration-200 flex items-center"
+                className="bg-white text-black py-2 px-6 rounded-lg shadow-lg hover:bg-[#211951] hover:text-white hover:shadow-xl transition duration-200 flex items-center"
               >
                 Login Now <span className="ml-2">→</span>
               </button>

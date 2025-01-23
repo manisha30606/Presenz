@@ -172,7 +172,7 @@ const MakeAttendance = () => {
               {!showWebcam ? (
                 <button
                   onClick={handleStart}
-                  className="bg-[#15156a] text-white px-6 sm:px-8 py-3 rounded-lg hover:bg-cyan-600 shadow-md w-full max-w-xs sm:max-w-sm"
+                  className="bg-[#15156a] text-white px-6 sm:px-8 py-3 rounded-lg hover:bg-[#30cba2] shadow-md w-full max-w-xs sm:max-w-sm"
                 >
                   Start Webcam
                 </button>
@@ -180,7 +180,7 @@ const MakeAttendance = () => {
                 <>
                   <button
                     onClick={handleCaptureImage}
-                    className="bg-[#15156a] text-white px-6 sm:px-8 py-3 rounded-lg hover:bg-cyan-600 shadow-md w-full max-w-xs sm:max-w-sm"
+                    className="bg-[#15156a] text-white px-6 sm:px-8 py-3 rounded-lg hover:bg-[#30cba2] shadow-md w-full max-w-xs sm:max-w-sm"
                   >
                     Capture Image
                   </button>
@@ -217,7 +217,7 @@ const MakeAttendance = () => {
               <button
                 onClick={handleSubmitAttendance}
                 className={`${
-                  isSubmitting ? "bg-gray-400 cursor-not-allowed" : "bg-[#15156a] hover:bg-cyan-600"
+                  isSubmitting ? "bg-gray-400 cursor-not-allowed" : "bg-[#15156a] hover:bg-[#30cba2]"
                 } text-white px-6 sm:px-8 py-3 rounded-lg shadow-md w-full max-w-xs sm:max-w-sm`}
                 disabled={isSubmitting}
               >

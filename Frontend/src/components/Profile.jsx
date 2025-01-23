@@ -86,16 +86,16 @@ const Profile = () => {
             <h2 className="sm:text-2xl text-[#279DBA] text-lg font-bold">
               {profile.name} 
             </h2>
-            <p className="text-gray-600 text-sm">
+            <p className="text-gray-600 text-sm py-4">
               <span className="font-semibold">Registration Number:</span> {profile.username}
             </p>
-            <p className="text-gray-500 text-sm">
+            <p className="text-gray-500 text-sm py-2">
               <span className="font-semibold">Phone:</span> {profile.mobile}
             </p>
-            <p className="text-gray-500 text-sm">
+            <p className="text-gray-500 text-sm py-2">
               <span className="font-semibold">Email:</span> {profile.email}
             </p>
-            <p className="text-gray-500 text-sm">
+            <p className="text-gray-500 text-sm py-2">
               <span className="font-semibold">Gender:</span> {profile.gender}
             </p>
            

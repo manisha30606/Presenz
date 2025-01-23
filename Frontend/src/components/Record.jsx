@@ -142,7 +142,7 @@ const Record = () => {
   };
 
   return (
-    <div className="w-full text-[#821131] shadow-md rounded-lg p-6 mt-6">
+    <div className="w-full text-[#13614d] shadow-md rounded-lg p-6 mt-6">
       {/* Year and Month Selection */}
       <h2 className="text-xl font-bold mb-4">Year and Month Selection</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">

@@ -41,7 +41,7 @@ const TeacherDash = () => {
       <div className="flex flex-col md:flex-row mb:2.5rem text-gray-50">
         {/* Toggle Button for Mobile View */}
         <button
-          className="md:hidden fixed top-3 left-3 z-50 bg-[#15156a] text-white p-2 rounded"
+          className="md:hidden fixed top-3 left-3 z-50 bg-[#0c4e3c] text-white p-2 rounded"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
           {isMenuOpen ? <FiX size={20} /> : <FiMenu size={20} />}
@@ -49,12 +49,12 @@ const TeacherDash = () => {
 
         {/* Sidebar */}
         <aside
-          className={`fixed left-0 top-0 h-screen border-r pt-10 px-4 bg-[#f07b36] transition-transform duration-300 ${isMenuOpen ? "translate-x-0" : "-translate-x-full md:translate-x-0"
+          className={`fixed left-0 top-0 h-screen border-r pt-10 px-4 bg-[#0c4e3c] transition-transform duration-300 ${isMenuOpen ? "translate-x-0" : "-translate-x-full md:translate-x-0"
             }`}
         >
           {/* Logo Section */}
           <div className="mb-4">
-            <h1 className="text-[#821131] cursor-pointer font-bold text-center text-lg md:text-xl lg:text-2xl">
+            <h1 className="text-[#15F5BA] cursor-pointer font-bold text-center text-lg md:text-xl lg:text-2xl">
               ATTENDIFY
             </h1>
           </div>
@@ -82,7 +82,7 @@ const TeacherDash = () => {
             className="w-full absolute bottom-5 left-0 px-4 py-2 cursor-pointer text-center"
             onClick={handleLogout}
           >
-            <p className="flex items-center space-x-2 text-xs text-white py-2 px-5 bg-[#821131] rounded-full">
+            <p className="flex items-center space-x-2 text-xs text-[#000] py-2 px-5 bg-[#15F5BA] rounded-full">
               <RiLogoutCircleRLine className="w-4 h-4" />
               <span className="md:flex">Log Out</span>
             </p>
@@ -90,7 +90,7 @@ const TeacherDash = () => {
         </aside>
 
         {/* Main Content */}
-        <main className="w-full md:ml-56 p-4 bg-[#fff4dd] min-h-screen flex flex-col">
+        <main className="w-full md:ml-56 p-4 bg-[#F0F3FF] min-h-screen flex flex-col">
           {renderComponent()}
         </main>
       </div>
