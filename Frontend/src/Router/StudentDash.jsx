@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import Attendance from "../components/Attendance";
 import MakeAttendance from "../components/MakeAttendance";
 import Profile from "../components/Profile";
+import Notes from "../components/Notes";
 import { LuUser, LuUsers, LuMessageSquare } from "react-icons/lu";
 import { FaSuitcase } from "react-icons/fa";
 import { FiMenu, FiX } from "react-icons/fi";
@@ -38,6 +39,8 @@ const StudentDashboard = () => {
         return <MakeAttendance />;
       case "profile":
         return <Profile />;
+        case "notes":
+          return <Notes />;
       default:
         return <Attendance />;
     }
@@ -66,7 +69,7 @@ const StudentDashboard = () => {
               Welcome, {loggedInUser}
             </h1>
             <h1 className="text-[#15F5BA] cursor-pointer font-bold text-center text-lg md:text-xl lg:text-2xl">
-              ATTENDIFY
+              PRESENZ
             </h1>
           </div>
 
@@ -89,6 +92,12 @@ const StudentDashboard = () => {
               className="cursor-pointer flex items-center space-x-2"
             >
               <FaSuitcase /> <span>Make Attendance</span>
+            </li>
+            <li
+              onClick={() => setActiveComponent("notes")}
+              className="cursor-pointer flex items-center space-x-2"
+            >
+              <FaSuitcase /> <span>Notes</span>
             </li>
           </ul>
 

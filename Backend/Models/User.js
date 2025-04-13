@@ -32,7 +32,12 @@ const StudentSchema = new Schema({
     },
     stuPassword: { type: String, required: true },
     stuPhoto: { type: String, required: true },
-    // cameraStatus: { type: Boolean, default: false }
+    stuPresentDate: [
+        {
+            date: { type: String, required: true }, 
+            time: { type: String, required: true }  
+        }
+    ]
 });
 
 // Apply toJSON transformation to StudentSchema

@@ -2,11 +2,13 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Active from "../components/Active";
 import Record from "../components/Record";
+import Upload from "../components/Upload";
 import { LuUsers, LuMessageSquare } from "react-icons/lu";
 import { FaSuitcase } from "react-icons/fa";
 import { FiMenu, FiX } from "react-icons/fi";
 import { handleError, handleSuccess } from "../utils";
 import { RiLogoutCircleRLine } from "react-icons/ri";
+import { CgNotes } from "react-icons/cg";
 
 const TeacherDash = () => {
   const [activeComponent, setActiveComponent] = useState("attendance");
@@ -31,6 +33,8 @@ const TeacherDash = () => {
         return <Record />;
       case "attendanceTab":
         return <Active />;
+        case "UploadNotes":
+          return <Upload/>;
       default:
         return <Record />;
     }
@@ -55,7 +59,7 @@ const TeacherDash = () => {
           {/* Logo Section */}
           <div className="mb-4">
             <h1 className="text-[#15F5BA] cursor-pointer font-bold text-center text-lg md:text-xl lg:text-2xl">
-              ATTENDIFY
+              PRESENZ
             </h1>
           </div>
 
@@ -74,6 +78,12 @@ const TeacherDash = () => {
               className="cursor-pointer flex items-center space-x-2"
             >
               <LuUsers /> <span>Attendance</span>
+            </li>
+            <li
+              onClick={() => setActiveComponent("UploadNotes")}
+              className="cursor-pointer flex items-center space-x-2"
+            >
+              <CgNotes/> <span>Upload Notes</span>
             </li>
           </ul>
 

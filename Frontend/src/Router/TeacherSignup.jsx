@@ -64,15 +64,15 @@ function TeacherSignup() {
                      ]"
       >
         <h2 className="text-2xl font-bold text-[#23c297] text-center mb-6">
-          Admin Sign Up
+          Teacher Sign Up
         </h2>
         <form onSubmit={handleSignup}>
           {/* Form Inputs */}
           {[
-            { label: "Name of Admin", name: "teaName", type: "text" },
-            { label: "admEmail of Admin", name: "teaEmail", type: "teaEmail" },
+            { label: "Name of Teacher", name: "teaName", type: "text" },
+            { label: "Email of Teacher", name: "teaEmail", type: "teaEmail" },
             { label: "Gender", name: "teaGender", type: "text" },
-            { label: "Admin ID", name: "teaId", type: "text" },
+            { label: "Teacher ID", name: "teaId", type: "text" },
             { label: "Password", name: "teaPassword", type: "password" },
           ].map(({ label, name, type }) => (
             <div key={name} className="mb-4">

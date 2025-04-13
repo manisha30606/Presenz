@@ -108,8 +108,18 @@ const Active = () => {
   return (
     <div className="flex justify-center items-center h-screen">
       <div className="text-center">
-        <h1 className="mb-4 text-2xl font-semibold">{isActive ? "On" : "Off"}</h1>
-
+      {teacher ? (
+        <div className="mt-8 text-center mb-6">
+          <h2 className="text-xl text-black font-bold">Welcome, {teacher.name}</h2>
+    
+          <p className="text-black">Current Status: {isActive ? "ON" : "OFF"}</p>
+        </div>
+      ) : (
+        <p className="mt-8">Loading teacher data...</p>
+      )}
+      
+        <h1 className="mb-4 text-2xl text-black font-semibold">{isActive ? "On" : "Off"}</h1>
+       
         <button
           onClick={toggleState}
           disabled={loading || !token || !teacher}
@@ -122,15 +132,7 @@ const Active = () => {
         {errorMessage && <p className="mt-4 text-red-500">{errorMessage}</p>}
       </div>
 
-      {teacher ? (
-        <div className="mt-8 text-center">
-          <h2 className="text-xl font-bold">Welcome, {teacher.name}</h2>
-          <p>Email: {teacher.email}</p>
-          <p>Current Status: {isActive ? "ON" : "OFF"}</p>
-        </div>
-      ) : (
-        <p className="mt-8">Loading teacher data...</p>
-      )}
+   
     </div>
   );
 };

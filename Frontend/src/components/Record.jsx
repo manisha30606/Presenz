@@ -34,7 +34,7 @@ const Record = () => {
   // Generate employee data for 40 employees
   const employees = Array.from({ length: 40 }, (_, i) => ({
     id: i + 1,
-    name: `Employee ${i + 1}`,
+    name: `Student ${i + 1}`,
   }));
 
   // State to store attendance data for employees
@@ -86,7 +86,7 @@ const Record = () => {
             <thead>
               <tr className="bg-gray-100">
                 <th className="border border-gray-300 px-6 py-6">
-                  Employee Name
+                  Students Name
                 </th>
                 {Array.from({ length: daysInMonth }, (_, i) => i + 1).map(
                   (day) => (

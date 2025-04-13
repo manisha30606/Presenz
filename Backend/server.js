@@ -16,8 +16,8 @@ dotenv.config();
 
 const app = express();
 
-// app.use(bodyParser.json({ limit: '50mb' })); // JSON payload limit
-app.use(bodyParser.urlencoded({ limit: '50mb', extended: true })); // URL-encoded data limit
+app.use(bodyParser.json({ limit: '20mb' })); // JSON payload limit
+app.use(bodyParser.urlencoded({ limit: '20mb', extended: true })); // URL-encoded data limit
 
 
 const PORT = process.env.PORT || 5000;
