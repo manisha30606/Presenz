@@ -3,22 +3,30 @@ import multer from 'multer';
 import path from 'path'
 import dotenv from 'dotenv';
 import cors from 'cors';
+import { fileURLToPath } from 'url';
+
 import { createServer } from 'http'; 
 import { Server } from 'socket.io'; 
 import AuthRouter from './Routes/AuthRouter.js';   
 import bodyParser from 'body-parser';
 import fs from 'fs';
 
-// import AdminRouter from './Routes/AdminRoutes.js'; 
+
 import './Models/db.js';  
 
 dotenv.config();
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const app = express();
 
 app.use(bodyParser.json({ limit: '20mb' })); // JSON payload limit
 app.use(bodyParser.urlencoded({ limit: '20mb', extended: true })); // URL-encoded data limit
 
+
+// Serve static files from /uploads folder
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 const PORT = process.env.PORT || 5000;
 

@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { FaPencilAlt } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
-import img from "../assets/h-3.avif";  // Default Profile Image
-import bgImage from "../assets/image-1.jpg";  // Default Background Image
+import img from "../assets/h-3.avif"; 
+import bgImage from "../assets/image-1.jpg";  
 
 const Profile = () => {
   const navigate = useNavigate();
@@ -43,7 +43,7 @@ const Profile = () => {
       } catch (error) {
         if (error.response && error.response.status === 401) {
           console.error("Unauthorized: Invalid token");
-          navigate("/login"); // Redirect on invalid token
+          navigate("/login");
         } else {
           console.error("Error fetching user data:", error);
         }
@@ -76,7 +76,7 @@ const Profile = () => {
     <div className="min-h-screen bg-gray-100 flex flex-col items-center">
       {/* Background Image Section */}
       <div
-        className="w-full h-64 bg-cover bg-center relative"
+        className="w-full h-64 bg-cover bg-center"
         style={{ backgroundImage: `url(${backgroundImage})` }}
       >
         <label className="absolute top-4 right-4 bg-gray-800 text-cyan-600 p-2 rounded-full cursor-pointer">

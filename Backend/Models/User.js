@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 const { Schema } = mongoose;
 
-// Student Schema
+// STUDENT SCHEMA
 const StudentSchema = new Schema({
     stuName: { type: String, required: true, trim: true },
     stuGender: { type: String, required: true, trim: true },
@@ -48,7 +48,7 @@ StudentSchema.set('toJSON', {
     }
 });
 
-// Teacher Schema
+// TEACHER SCHEMA
 const TeacherSchema = new Schema({
     teaName: { type: String, required: true, trim: true },
     teaId: { type: String, required: true, trim: true },
@@ -78,6 +78,29 @@ TeacherSchema.set('toJSON', {
     }
 });
 
-// Create Models
+// NOTE SCHEMA
+const NoteSchema = new Schema({
+    title: { type: String, required: true, trim: true },
+    teacher: { type: String, required: true, trim: true },  
+    subject: { type: String, required: true, trim: true },
+    filename: { type: String, required: true },
+    uploadedAt: { type: Date, default: Date.now }
+});
+
+
+// GET NOTIFICATION SCHEMA
+const notificationSchema = new mongoose.Schema({
+  title: String,
+  description: String,
+  type: String,
+  subject: String,
+  teacher: String,
+  dueDate: Date
+}, { timestamps: true });
+
+// EXPORTING MODELS
+
+export const NotificationModel = mongoose.model('Notification', notificationSchema);
 export const StudentModel = mongoose.model('Student', StudentSchema);
 export const TeacherModel = mongoose.model('Teacher', TeacherSchema);
+export const NoteModel = mongoose.model('Note', NoteSchema);

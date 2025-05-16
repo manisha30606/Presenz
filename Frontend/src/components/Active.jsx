@@ -5,21 +5,21 @@ const Active = () => {
   const [isActive, setIsActive] = useState(false);
   const [errorMessage, setErrorMessage] = useState(null);
   const [loading, setLoading] = useState(false);
-  const [teacher, setTeacher] = useState(null); // Store the logged-in teacher's data
+  const [teacher, setTeacher] = useState(null); 
 
-  const token = localStorage.getItem("token"); // Retrieve token from localStorage
+  const token = localStorage.getItem("token"); 
   console.log(token);
 
-  // Fetch the logged-in teacher details
+  // FETCH TEACHER DETAILS
   const fetchTeacher = async () => {
     try {
       const response = await axios.get("http://localhost:9000/auth/getTeacher", {
         headers: {
-          Authorization: `Bearer ${token}`, // Pass token for authentication
+          Authorization: `Bearer ${token}`,
         },
       });
       setTeacher(response.data); // Set teacher data
-      setIsActive(response.data.status === "ON"); // Set initial status based on response
+      setIsActive(response.data.status === "ON"); 
     } catch (error) {
       setErrorMessage("Error fetching teacher details.");
       console.error("Error fetching teacher details:", error.message);
@@ -69,13 +69,16 @@ const Active = () => {
   //     setLoading(false);
   //   }
   // };
+  
+  
+  
   const toggleState = async () => {
     if (!token) {
       setErrorMessage("No token provided. Please log in first.");
       return;
     }
 
-    const newState = !isActive; // Toggle state
+    const newState = !isActive;
     setIsActive(newState);
     setErrorMessage(null);
     setLoading(true);
@@ -85,7 +88,7 @@ const Active = () => {
         "http://localhost:9000/auth/updateStatus",
         {
           status: newState ? "ON" : "OFF",
-          teaId: teacher.teaId, // <-- Use teaId instead of teacherId
+          teaId: teacher.teaId, 
         },
         {
           headers: {
@@ -97,7 +100,7 @@ const Active = () => {
 
       console.log("Status updated:", response.data.message);
     } catch (error) {
-      setIsActive(!newState); // Revert state on failure
+      setIsActive(!newState);
       setErrorMessage(error.response?.data?.message || "Error updating status.");
       console.error("Error updating status:", error.message);
     } finally {

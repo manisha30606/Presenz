@@ -99,7 +99,11 @@
 
 // export default attendanceHandler;
 
-import { StudentModel } from '../Models/User.js'; 
+
+
+//========= ATTENDANCE HANDLER ==========
+
+import { StudentModel } from '../Models/User.js';
 import { TeacherModel } from '../Models/User.js';
 import fs from 'fs';
 import path from 'path';
@@ -113,7 +117,7 @@ const __dirname = path.dirname(__filename);
 
 const attendanceHandler = async (req, res) => {
     try {
-        const userId = req.user?._id; // Extract user ID from token
+        const userId = req.user?._id; 
         if (!userId) {
             return res.status(400).json({ message: "User ID is required." });
         }
@@ -137,13 +141,21 @@ const attendanceHandler = async (req, res) => {
             return res.status(400).json({ message: "Image, location, date, and time are required." });
         }
 
-        // Validate location
+        // // Validate location
+        // const officeLocation = { latitude: 25.5940947, longitude: 85.1375645 }; // Example location
+        // const isWithinRange = geolib.isPointWithinRadius(
+        //     { latitude, longitude },
+        //     officeLocation,
+        //     1000 // 1 km radius
+        // );
+
         const officeLocation = { latitude: 25.5940947, longitude: 85.1375645 }; // Example location
         const isWithinRange = geolib.isPointWithinRadius(
             { latitude, longitude },
             officeLocation,
-            1000 // 1 km radius
+            15000 // 15 km radius
         );
+
 
         if (!isWithinRange) {
             return res.status(400).json({ message: "Location is outside the permitted range." });

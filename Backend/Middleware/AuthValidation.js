@@ -1,5 +1,6 @@
 import Joi from 'joi';
 
+// STUDENT SIGNUP VALIDATION
 const signupValidation = (req, res, next) => {
     const schema = Joi.object({
         stuName: Joi.string()
@@ -69,8 +70,7 @@ const signupValidation = (req, res, next) => {
     next();
 };
 
-
-// Login Validation
+// STUDENT LOGIN VALIDATION
 const loginValidation = (req, res, next) => {
     const schema = Joi.object({
         stuName: Joi.string().min(3).max(100).required(),
@@ -88,7 +88,7 @@ const loginValidation = (req, res, next) => {
     next();
 };
 
-// teacher Signup Validation
+// TEACHER SIGNUP VALIDATION
 const teacherSignupValidation = (req, res, next) => {
     const schema = Joi.object({
         teaName: Joi.string().min(3).max(100).required(),
@@ -109,7 +109,7 @@ const teacherSignupValidation = (req, res, next) => {
     next();
 };
 
-// teacher Login Validation
+// TEACHER LOGIN VALIDATION
  const teacherLoginValidation = (req, res, next) => {
     const schema = Joi.object({
         teaEmail: Joi.string().email().required(),
@@ -126,5 +126,5 @@ const teacherSignupValidation = (req, res, next) => {
     next();
 };
 
-// Exporting both validations
+// EXPORTING VALIDATIONS
 export { signupValidation, loginValidation, teacherLoginValidation ,teacherSignupValidation};

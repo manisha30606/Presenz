@@ -1,10 +1,9 @@
 import { TeacherModel } from "../Models/User.js";
 
-// Assuming you have a JWT authentication middleware
-// Use the middleware to ensure req.user contains the teacher's ID
+//=================== GET TEACHER DATA  ==================
 export const getTeacher = async (req, res) => {
     try {
-        const teacherId = req.user.id; // Get teacher ID from the authenticated user's JWT token
+        const teacherId = req.user.id; 
         const teacher = await TeacherModel.findById(teacherId);
 
         if (!teacher) {
@@ -15,7 +14,7 @@ export const getTeacher = async (req, res) => {
             teaId: teacher._id,
             teaName: teacher.name,
             teaEmail: teacher.email,
-            teaStatus: teacher.status, // Ensure 'status' field exists in your schema
+            teaStatus: teacher.status,
         });
     } catch (error) {
         console.error("Error fetching teacher details:", error.message);

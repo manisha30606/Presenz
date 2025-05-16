@@ -349,7 +349,7 @@ const MakeAttendance = () => {
       );
   
       toast.success(response.data.message || "Attendance marked successfully!");
-      setAttendanceMessage("✅ Attendance marked successfully!"); // ✅ Update message here
+      setAttendanceMessage("✅ Attendance marked successfully!"); 
     } catch (error) {
       console.error("Error marking attendance:", error);
   

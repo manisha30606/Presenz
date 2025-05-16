@@ -1,7 +1,7 @@
 import jwt from 'jsonwebtoken';
 
 const ensureAuthenticated = (req, res, next) => {
-    const token = req.headers.authorization?.split(" ")[1]; // Bearer token
+    const token = req.headers.authorization?.split(" ")[1]; 
 
     if (!token) {
         return res.status(401).json({ message: "No token provided" });
@@ -9,10 +9,10 @@ const ensureAuthenticated = (req, res, next) => {
 
     try {
         const decoded = jwt.verify(token, process.env.JWT_SECRET);
-        req.user = decoded; // Attach the decoded user to the request
+        req.user = decoded; 
         next();
     } catch (err) {
-        console.error("JWT Error:", err.message); // Log for debugging
+        // console.error("JWT Error:", err.message); 
         if (err.name === "TokenExpiredError") {
             return res.status(401).json({ message: "Token has expired" });
         }

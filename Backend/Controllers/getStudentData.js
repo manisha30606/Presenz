@@ -30,6 +30,8 @@
 
 import { StudentModel } from '../Models/User.js';
 
+
+//[==================== GET STUDENT DATA  ==================]
 const getStudata = async (req, res) => {
   try {
     const userId = req.user?._id; // Extract from token

@@ -8,6 +8,7 @@ import fs from 'fs';
 
 dotenv.config();
 
+// =============  STUDENT SIGNUP & LOGIN =============
 
 export const stuSignup = async (req, res) => {
     try {
@@ -55,7 +56,7 @@ export const stuSignup = async (req, res) => {
 };
 
 
-// Login Controller
+
 export const stuLogin = async (req, res) => {
     try {
         const { stuId, stuPassword } = req.body;
@@ -99,6 +100,8 @@ export const stuLogin = async (req, res) => {
     }
 };
 
+
+// ================== TEACHER SIGNUP & LOGIN ==================
 
 export const teacherSignup = async (req, res) => {
     try {
